@@ -1,0 +1,21 @@
+def valid(string):
+    dict = {'[': ']', '{': '}', '(': ')'}
+    arr=list()
+    for x in string:
+        arr.append(x)
+    m = len(arr)
+    for _ in range(int(m/2)):
+        if dict[arr[0]]==arr[-1]:
+            arr=arr[1:len(arr)-1]
+        elif dict[(arr[len(arr)-2])]==arr[-1]:
+            arr.pop()
+            arr.pop()
+    if arr==[]:
+        return True
+    return False
+ap1='[{()}]'
+ap2='[(])'
+ap3='{[]}()'
+ap4='{}[]'
+print(valid(ap1))
+print(valid(ap2))
