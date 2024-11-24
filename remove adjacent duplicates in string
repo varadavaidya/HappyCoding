@@ -8,4 +8,9 @@ def remove(string):
         elif string[i]==string[i+1]:
             i+=2
             pass
-    return result+string[-1]
+    if string[len(string)-1]==string[-1]:
+        return result
+    return result +string[-1]
+
+
+print(remove('spree'))
