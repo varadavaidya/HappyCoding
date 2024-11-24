@@ -1,0 +1,12 @@
+def happyNumber(n):
+    if n<10:
+        return n**2
+    return int((n%10)**2)+happyNumber(int((n-(n%10))/10))
+def second(n):
+    assert n>=1 and n<=int((2**31)-1),'Out of range'
+    if happyNumber(n)==1:
+        return True
+    else:
+        return second(happyNumber(n))
+
+print(second(1000))
