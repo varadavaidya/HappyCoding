@@ -1,0 +1,8 @@
+def find_duplicates(arr):
+    m=len(arr)
+    for i in range(m):
+        if arr[i] in arr[i+1:m]:
+            print(arr[i])
+
+
+find_duplicates([1,2,3,6,3,6,1])
