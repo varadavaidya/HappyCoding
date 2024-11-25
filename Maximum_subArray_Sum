@@ -1,0 +1,18 @@
+def maxSubArraysSum(arr):
+    max_sum_subArray= [arr[0]]
+    n=len(arr)
+    for i in range(1,n+1):
+        start_index = 0
+        end_index=i
+        for j in range(0,n+1-i):
+            sub_arr= arr[start_index:end_index]
+            print(sub_arr)
+            start_index+=1
+            end_index+=1
+            if sum(sub_arr)>sum(max_sum_subArray):
+                max_sum_subArray=sub_arr
+    print(f"{max_sum_subArray} is maximum sum sub array")
+
+
+maxSubArraysSum([2,3,-8,7,-1,2,3])
+
