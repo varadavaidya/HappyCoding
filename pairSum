@@ -1,0 +1,11 @@
+def pairSum(arr,sum):
+    pairs=list()
+    for i in range(len(arr)):
+        for j in range(i,len(arr)):
+            if arr[i]+arr[j]==sum:
+                pair=(arr[i],arr[j])
+                pairs.append(pair)
+    return pairs
+
+
+print(pairSum([1,5,7,-1,5],6))
