@@ -1,0 +1,15 @@
+def equilibriumPoint(arr):
+    m=len(arr)
+    eqbm_index=1
+    flag=True
+    while flag:
+        if sum(arr[:eqbm_index])!=sum(arr[eqbm_index+1:m]):
+            eqbm_index+=1
+            flag=True
+        else:
+            flag=False
+    return eqbm_index
+
+print(equilibriumPoint([1,3,5,2,2]))
+print(equilibriumPoint([0,1,0]))
+print(equilibriumPoint([1,2,3]))
