@@ -1,0 +1,16 @@
+def arrayLeaders(arr):
+    m=len(arr)
+    i=0
+    while i >=0 and i<= m-1 :
+        new_arr=arr[i+1:]
+        if new_arr!=[]:
+            if arr[i]>=max(new_arr):
+                print(arr[i])
+            else:
+                pass
+            i+=1
+        else:
+            return arr[i]
+
+
+print(arrayLeaders([16,17,4,3,5,2]))
