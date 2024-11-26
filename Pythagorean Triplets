@@ -1,0 +1,19 @@
+def pythagoreanTriplets(arr):
+    m=len(arr)
+    flag=True
+    for i in range(0,m):
+        for j in range(i,m):
+            for k in range(j,m):
+                triplet=[arr[i],arr[j],arr[k]]
+                triplet.sort()
+                if int(triplet[2]**2)==int(triplet[0]**2)+int(triplet[1]**2):
+                    print(triplet)
+                    flag=False
+                else:
+                    pass
+    if flag==True:
+        print(-1)
+
+
+pythagoreanTriplets([3,2,4,6,5,8,6,10,12,15,13])
+pythagoreanTriplets([1,1,1])
