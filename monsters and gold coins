@@ -1,0 +1,41 @@
+
+M=int(input("number of test cases: "))
+N=int(input("number of monsters: "))
+def maxCoins(M,N):
+    for _ in range(M):
+        if N>=0 and N<=10**4:
+            coins_array=[]
+            for _ in range(N):
+                coins_array_str=input("coins_array : ").split()
+                for x in coins_array_str:
+                    if x!=" " and int(x)>=0 and int(x)<=10**9:
+                        coins_array.append(int(x))
+                m = len(coins_array)
+                if m == 1:
+                    return coins_array[0]
+                else:
+                    odd_sum = 0
+                    even_sum = 0
+                    if m % 2 == 0:
+                        for i in range(0, int(m / 2)):
+                            odd_sum += coins_array[2 * i + 1]
+                            even_sum += coins_array[2 * i]
+                            i += 1
+                        return max(even_sum,odd_sum)
+                    else:
+                        for i in range(0, int(m / 2)):
+                            odd_sum += coins_array[2 * i + 1]
+                            even_sum += coins_array[2 * i]
+                            i+=1
+                        even_sum += coins_array[-1]
+                        return max(even_sum, odd_sum)
+
+
+
+
+
+
+
+
+
+print(maxCoins(M,N))
