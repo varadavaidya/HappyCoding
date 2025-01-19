@@ -13,29 +13,25 @@ class Solution:
             current_node=current_node.next
         current_node1=l1
         current_node2=l2
-        sum=0
+        sum1=0
+        sum2=0
         for i in range(count):
             while current_node1 is not None:
-                if current_node1.val+current_node2.val<10 :
-                    sum=sum*10+current_node1.val+current_node2.val
-                else:
-                    dummy=current_node1.val+current_node2.val
-                    num=dummy%10
-                    carry=int((dummy-num)/10)
-                    sum=(sum)*10+current_node1.val+current_node2.val
-                current_node1 = current_node1.next
-                current_node2 = current_node2.next
-            return sum
+                sum1= sum1*10+current_node1.val
+                sum2=sum2*10+current_node2.val
+                current_node1=current_node1.next
+                current_node2=current_node2.next
+        return sum1+sum2
 
 
 
 
-l1=ListNode(1)
-l1.next=ListNode(2)
+l1=ListNode(2)
+l1.next=ListNode(4)
 l1.next.next=ListNode(3)
-l2=ListNode(4)
-l2.next=ListNode(5)
-l2.next.next=ListNode(9)
+l2=ListNode(5)
+l2.next=ListNode(6)
+l2.next.next=ListNode(4)
 
 result=Solution()
 print(result.addTwoNumbers(l1,l2))
