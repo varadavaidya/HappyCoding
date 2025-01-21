@@ -1,4 +1,4 @@
-def LongestSubString(str):
+def AllSubStrings(str):
     m=len(str)
     i=0
     while i <m:
@@ -7,3 +7,5 @@ def LongestSubString(str):
             print(str[i:end])
             end+=1
         i+=1
+
+AllSubStrings('apple')
