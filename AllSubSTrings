@@ -1,0 +1,9 @@
+def LongestSubString(str):
+    m=len(str)
+    i=0
+    while i <m:
+        end=i+1
+        while end<=m:
+            print(str[i:end])
+            end+=1
+        i+=1
