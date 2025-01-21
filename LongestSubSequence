@@ -1,0 +1,15 @@
+def LongestSubSequence(str):
+    m=len(str)
+    list=[]
+    if m==1:
+        return 1
+    else:
+        for x in str:
+            if x not in list:
+                list.append(x)
+            else:
+                pass
+        return len(list)
+
+sr='pwwkew'
+print(LongestSubstring(sr))
