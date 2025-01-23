@@ -1,0 +1,32 @@
+def LongestSubString(str):
+    m=len(str)
+    i=0
+    dictresult = dict()
+    while i <m:
+        end=i+1
+        while end<=m:
+            res=str[i:end]
+            print(res)
+            dict_= dict()
+            for x in res:
+                if x not in dict_:
+                    dict_[x]=1
+                else:
+                    dict_[x]+=1
+            print(dict_)
+            '''if all(dict_.values())==1:
+                print(dict_)
+                dictresult[res]=sum(dict_.values())'''
+            end+=1
+        i+=1
+    '''print(dictresult)'''
+
+
+    maxLen=0
+
+
+
+
+LongestSubString('pwwkew')
+
+
